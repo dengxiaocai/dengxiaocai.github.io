@@ -21,7 +21,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/1.png">
 <meta property="article:published_time" content="2020-05-01T15:52:57.000Z">
-<meta property="article:modified_time" content="2020-05-02T04:26:32.204Z">
+<meta property="article:modified_time" content="2020-05-02T04:56:20.800Z">
 <meta property="article:author" content="小才">
 <meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary">
@@ -194,7 +194,6 @@
       </a>
     </div>
 
-
                 
 
                 
@@ -243,14 +242,24 @@
 <p><img src="/images/5.png" alt></p>
 <h3 id="评论管理"><a href="#评论管理" class="headerlink" title="评论管理"></a>评论管理</h3><p>对博客中的文章进行评论后，进入LeanCloud的控制台中，在存储中找到Class Comment对评论进行管理。</p>
 <hr>
-<h2 id="未完待续。。。"><a href="#未完待续。。。" class="headerlink" title="未完待续。。。"></a>未完待续。。。</h2>
+<h2 id="阅读统计"><a href="#阅读统计" class="headerlink" title="阅读统计"></a>阅读统计</h2><h3 id="引入不蒜子"><a href="#引入不蒜子" class="headerlink" title="引入不蒜子"></a>引入不蒜子</h3><p>将不蒜子js文件引入博客主题公共组件中，在themes/hueman/layout/common/footer.ejs中加入以下代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script async src=<span class="string">"//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="文章访问统计"><a href="#文章访问统计" class="headerlink" title="文章访问统计"></a>文章访问统计</h3><p>要显示每篇文章的访问量，复制以下代码添加到你需要显示的位置。<br>可以在标签上自定义一些样式。<br>算法：pv的方式，单个用户点击1篇文章，本篇文章记录1次阅读量。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id=<span class="string">"busuanzi_container_page_pv"</span>&gt;</span><br><span class="line">  本文总阅读量&lt;span id=<span class="string">"busuanzi_value_page_pv"</span>&gt;&lt;/span&gt;次</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+<p>这里我将其放到themes/hueman/layout/common/article.ejs文件的class=”article-meta”的div下，将&lt;%- partial(‘post/counter’) %&gt;删掉。</p>
+<h3 id="整站访问统计"><a href="#整站访问统计" class="headerlink" title="整站访问统计"></a>整站访问统计</h3><p>算法a：pv的方式，单个用户连续点击n篇文章，记录n次访问量。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id=<span class="string">"busuanzi_container_site_pv"</span>&gt;</span><br><span class="line">    本站总访问量&lt;span id=<span class="string">"busuanzi_value_site_pv"</span>&gt;&lt;/span&gt;次</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+<p>算法b：uv的方式，单个用户连续点击n篇文章，只记录1次访客数。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id=<span class="string">"busuanzi_container_site_uv"</span>&gt;</span><br><span class="line">  本站访客数&lt;span id=<span class="string">"busuanzi_value_site_uv"</span>&gt;&lt;/span&gt;人次</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+<p>这里我将其放在themes/hueman/layout/common/footer.ejs文件的class=”footer-plugins”的div元素里。<br>！<a href="/images/6.png"></a><br>！<a href="/images/7.png"></a></p>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://yoursite.com/2020/05/01/hueman%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/" data-id="ck9p4kvkt000284v7cdgu406p" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2020/05/01/hueman%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/" data-id="ck9p5mpc90000yov7dcpyhfel" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -333,7 +342,7 @@
 输入如下命令获取 live2d ：1$ npm install --save hexo-helper-live2d
 
 模型选择请点击此处，我这里使用的是live2d-widget-m",
-        "wordCount": 1952
+        "wordCount": 2027
     }
 </script>
 
@@ -597,78 +606,6 @@
     </div>
 </footer>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-        
-    
-    <script src="//unpkg.com/valine"></script>
-    <script>
-        var GUEST = ['nick','mail','link'];
-        var meta = '';
-        meta = meta.split(',').filter(function (item) {
-            return GUEST.indexOf(item)>-1;
-        });
-        var avatarcdn = 'https://gravatar.loli.net/avatar/' == true;
-        new Valine({
-            el: '.vcomments',
-            notify: "",
-            verify: "",
-            appId: "SkRmazmCFe8y3wzWxlQb1TWS-gzGzoHsz",
-            appKey: "pkUOUEe4PUK7qyNrkXmFuAvK",
-            placeholder: "Just Do It",
-            avatar:"identicon",
-            recordIP:"",
-            visitor: "true"
-        });
-    </script>
-
-
-
-
-
-    
-        
-<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
-
-        
-<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
-
-        
-<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
-
-        
-<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
-
-        
-<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
-
-        
-<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
-
-        
-<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
-
-        
-<script src="/libs/lightgallery/js/lg-share.min.js"></script>
-
-        
-<script src="/libs/lightgallery/js/lg-video.min.js"></script>
-
-    
-    
-        
-<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
-
-    
-    
-
-    
-
-
-
-<!-- Custom Scripts -->
-
-<script src="/js/main.js"></script>
-
-
     </div>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":150,"height":340},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
 </html>
@@ -676,3 +613,4 @@
 <script type="text/javascript" src="/js/love.js"></script>
 <!-- 雪花特效 -->
 <script type="text/javascript" src="\js\snow.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
