@@ -21,7 +21,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/1.png">
 <meta property="article:published_time" content="2020-05-01T15:52:57.000Z">
-<meta property="article:modified_time" content="2020-05-02T13:32:45.304Z">
+<meta property="article:modified_time" content="2020-05-06T03:15:22.214Z">
 <meta property="article:author" content="小才">
 <meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary">
@@ -49,7 +49,7 @@
 
 
     
-<script src="/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/libs/jquery/3.5.0/jquery.min.js"></script>
 
     
     
@@ -61,6 +61,7 @@
         
 <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
 
+    
     
     
     
@@ -194,6 +195,7 @@
       </a>
     </div>
 
+
                 
 
                 
@@ -223,7 +225,8 @@
 <p>完成以上操作后，当我们在网页上点击鼠标的时候就可以看见爱心的特效了。<br><img src="/images/2.png" alt></p>
 <h2 id="添加网站雪花飘落效果"><a href="#添加网站雪花飘落效果" class="headerlink" title="添加网站雪花飘落效果"></a>添加网站雪花飘落效果</h2><p>样式一为树形雪花，样式二为圆点雪花<br><img src="/images/3.png" alt><br><img src="/images/4.png" alt><br>实现方法：在 \Hexo\themes\hueman\source\js 目录下新建一个 snow.js 文件，粘贴以下代码：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br></pre></td><td class="code"><pre><span class="line">/*样式一*/</span><br><span class="line">(<span class="keyword">function</span>($)&#123;</span><br><span class="line">	$.fn.snow = <span class="keyword">function</span>(options)&#123;</span><br><span class="line">	var <span class="variable">$flake</span> = $(<span class="string">'&lt;div id="snowbox" /&gt;'</span>).css(&#123;<span class="string">'position'</span>: <span class="string">'absolute'</span>,<span class="string">'z-index'</span>:<span class="string">'9999'</span>, <span class="string">'top'</span>: <span class="string">'-50px'</span>&#125;).html(<span class="string">'&amp;#10052;'</span>),</span><br><span class="line">	documentHeight 	= $(document).height(),</span><br><span class="line">	documentWidth	= $(document).width(),</span><br><span class="line">	defaults = &#123;</span><br><span class="line">		minSize		: 10,</span><br><span class="line">		maxSize		: 20,</span><br><span class="line">		newOn		: 1000,</span><br><span class="line">		flakeColor	: <span class="string">"#AFDAEF"</span> /* 此处可以定义雪花颜色，若要白色可以改为<span class="comment">#FFFFFF */</span></span><br><span class="line">	&#125;,</span><br><span class="line">	options	= $.extend(&#123;&#125;, defaults, options);</span><br><span class="line">	var interval= setInterval( <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">	var startPositionLeft = Math.random() * documentWidth - 100,</span><br><span class="line">	startOpacity = 0.5 + Math.random(),</span><br><span class="line">	sizeFlake = options.minSize + Math.random() * options.maxSize,</span><br><span class="line">	endPositionTop = documentHeight - 200,</span><br><span class="line">	endPositionLeft = startPositionLeft - 500 + Math.random() * 500,</span><br><span class="line">	durationFall = documentHeight * 10 + Math.random() * 5000;</span><br><span class="line">	<span class="variable">$flake</span>.<span class="built_in">clone</span>().appendTo(<span class="string">'body'</span>).css(&#123;</span><br><span class="line">		left: startPositionLeft,</span><br><span class="line">		opacity: startOpacity,</span><br><span class="line">		<span class="string">'font-size'</span>: sizeFlake,</span><br><span class="line">		color: options.flakeColor</span><br><span class="line">	&#125;).animate(&#123;</span><br><span class="line">		top: endPositionTop,</span><br><span class="line">		left: endPositionLeft,</span><br><span class="line">		opacity: 0.2</span><br><span class="line">	&#125;,durationFall,<span class="string">'linear'</span>,<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">		$(this).remove()</span><br><span class="line">	&#125;);</span><br><span class="line">	&#125;, options.newOn);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;)(jQuery);</span><br><span class="line">$(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    $.fn.snow(&#123; </span><br><span class="line">	    minSize: 5, /* 定义雪花最小尺寸 */</span><br><span class="line">	    maxSize: 50,/* 定义雪花最大尺寸 */</span><br><span class="line">	    newOn: 300  /* 定义密集程度，数字越小越密集 */</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">/*样式二*/</span><br><span class="line">/* 控制下雪 */</span><br><span class="line"><span class="keyword">function</span> snowFall(snow) &#123;</span><br><span class="line">    /* 可配置属性 */</span><br><span class="line">    snow = snow || &#123;&#125;;</span><br><span class="line">    this.maxFlake = snow.maxFlake || 200;   /* 最多片数 */</span><br><span class="line">    this.flakeSize = snow.flakeSize || 10;  /* 雪花形状 */</span><br><span class="line">    this.fallSpeed = snow.fallSpeed || 1;   /* 坠落速度 */</span><br><span class="line">&#125;</span><br><span class="line">/* 兼容写法 */</span><br><span class="line">requestAnimationFrame = window.requestAnimationFrame ||</span><br><span class="line">    window.mozRequestAnimationFrame ||</span><br><span class="line">    window.webkitRequestAnimationFrame ||</span><br><span class="line">    window.msRequestAnimationFrame ||</span><br><span class="line">    window.oRequestAnimationFrame ||</span><br><span class="line">    <span class="keyword">function</span>(callback) &#123; setTimeout(callback, 1000 / 60); &#125;;</span><br><span class="line"></span><br><span class="line">cancelAnimationFrame = window.cancelAnimationFrame ||</span><br><span class="line">    window.mozCancelAnimationFrame ||</span><br><span class="line">    window.webkitCancelAnimationFrame ||</span><br><span class="line">    window.msCancelAnimationFrame ||</span><br><span class="line">	window.oCancelAnimationFrame;</span><br><span class="line">/* 开始下雪 */</span><br><span class="line">snowFall.prototype.start = <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    /* 创建画布 */</span><br><span class="line">    snowCanvas.apply(this);</span><br><span class="line">    /* 创建雪花形状 */</span><br><span class="line">    createFlakes.apply(this);</span><br><span class="line">    /* 画雪 */</span><br><span class="line">    drawSnow.apply(this)</span><br><span class="line">&#125;</span><br><span class="line">/* 创建画布 */</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">snowCanvas</span></span>() &#123;</span><br><span class="line">    /* 添加Dom结点 */</span><br><span class="line">    var snowcanvas = document.createElement(<span class="string">"canvas"</span>);</span><br><span class="line">    snowcanvas.id = <span class="string">"snowfall"</span>;</span><br><span class="line">    snowcanvas.width = window.innerWidth;</span><br><span class="line">    snowcanvas.height = document.body.clientHeight;</span><br><span class="line">    snowcanvas.setAttribute(<span class="string">"style"</span>, <span class="string">"position:absolute; top: 0; left: 0; z-index: 1; pointer-events: none;"</span>);</span><br><span class="line">    document.getElementsByTagName(<span class="string">"body"</span>)[0].appendChild(snowcanvas);</span><br><span class="line">    this.canvas = snowcanvas;</span><br><span class="line">    this.ctx = snowcanvas.getContext(<span class="string">"2d"</span>);</span><br><span class="line">    /* 窗口大小改变的处理 */</span><br><span class="line">    window.onresize = <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">        snowcanvas.width = window.innerWidth;</span><br><span class="line">        /* snowcanvas.height = window.innerHeight */</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">/* 雪运动对象 */</span><br><span class="line"><span class="keyword">function</span> flakeMove(canvasWidth, canvasHeight, flakeSize, fallSpeed) &#123;</span><br><span class="line">    this.x = Math.floor(Math.random() * canvasWidth);   /* x坐标 */</span><br><span class="line">    this.y = Math.floor(Math.random() * canvasHeight);  /* y坐标 */</span><br><span class="line">    this.size = Math.random() * flakeSize + 2;          /* 形状 */</span><br><span class="line">    this.maxSize = flakeSize;                           /* 最大形状 */</span><br><span class="line">    this.speed = Math.random() * 1 + fallSpeed;         /* 坠落速度 */</span><br><span class="line">    this.fallSpeed = fallSpeed;                         /* 坠落速度 */</span><br><span class="line">    this.velY = this.speed;                             /* Y方向速度 */</span><br><span class="line">    this.velX = 0;                                      /* X方向速度 */</span><br><span class="line">    this.stepSize = Math.random() / 30;                 /* 步长 */</span><br><span class="line">    this.step = 0                                       /* 步数 */</span><br><span class="line">&#125;</span><br><span class="line">flakeMove.prototype.update = <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">    var x = this.x,</span><br><span class="line">        y = this.y;</span><br><span class="line">    /* 左右摆动(余弦) */</span><br><span class="line">    this.velX *= 0.98;</span><br><span class="line">    <span class="keyword">if</span> (this.velY &lt;= this.speed) &#123;</span><br><span class="line">        this.velY = this.speed</span><br><span class="line">    &#125;</span><br><span class="line">    this.velX += Math.cos(this.step += .05) * this.stepSize;</span><br><span class="line"></span><br><span class="line">    this.y += this.velY;</span><br><span class="line">    this.x += this.velX;</span><br><span class="line">    /* 飞出边界的处理 */</span><br><span class="line">    <span class="keyword">if</span> (this.x &gt;= canvas.width || this.x &lt;= 0 || this.y &gt;= canvas.height || this.y &lt;= 0) &#123;</span><br><span class="line">        this.reset(canvas.width, canvas.height)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">/* 飞出边界-放置最顶端继续坠落 */</span><br><span class="line">flakeMove.prototype.reset = <span class="keyword">function</span>(width, height) &#123;</span><br><span class="line">    this.x = Math.floor(Math.random() * width);</span><br><span class="line">    this.y = 0;</span><br><span class="line">    this.size = Math.random() * this.maxSize + 2;</span><br><span class="line">    this.speed = Math.random() * 1 + this.fallSpeed;</span><br><span class="line">    this.velY = this.speed;</span><br><span class="line">    this.velX = 0;</span><br><span class="line">&#125;;</span><br><span class="line">// 渲染雪花-随机形状（此处可修改雪花颜色！！！）</span><br><span class="line">flakeMove.prototype.render = <span class="keyword">function</span>(ctx) &#123;</span><br><span class="line">    var snowFlake = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);</span><br><span class="line">    snowFlake.addColorStop(0, <span class="string">"rgba(255, 255, 255, 0.9)"</span>);  /* 此处是雪花颜色，默认是白色 */</span><br><span class="line">    snowFlake.addColorStop(.5, <span class="string">"rgba(255, 255, 255, 0.5)"</span>); /* 若要改为其他颜色，请自行查 */</span><br><span class="line">    snowFlake.addColorStop(1, <span class="string">"rgba(255, 255, 255, 0)"</span>);    /* 找16进制的RGB 颜色代码。 */</span><br><span class="line">    ctx.save();</span><br><span class="line">    ctx.fillStyle = snowFlake;</span><br><span class="line">    ctx.beginPath();</span><br><span class="line">    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);</span><br><span class="line">    ctx.fill();</span><br><span class="line">    ctx.restore();</span><br><span class="line">&#125;;</span><br><span class="line">/* 创建雪花-定义形状 */</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">createFlakes</span></span>() &#123;</span><br><span class="line">    var maxFlake = this.maxFlake,</span><br><span class="line">        flakes = this.flakes = [],</span><br><span class="line">        canvas = this.canvas;</span><br><span class="line">    <span class="keyword">for</span> (var i = 0; i &lt; maxFlake; i++) &#123;</span><br><span class="line">        flakes.push(new flakeMove(canvas.width, canvas.height, this.flakeSize, this.fallSpeed))</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">/* 画雪 */</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">drawSnow</span></span>() &#123;</span><br><span class="line">    var maxFlake = this.maxFlake,</span><br><span class="line">        flakes = this.flakes;</span><br><span class="line">    ctx = this.ctx, canvas = this.canvas, that = this;</span><br><span class="line">    /* 清空雪花 */</span><br><span class="line">    ctx.clearRect(0, 0, canvas.width, canvas.height);</span><br><span class="line">    <span class="keyword">for</span> (var e = 0; e &lt; maxFlake; e++) &#123;</span><br><span class="line">        flakes[e].update();</span><br><span class="line">        flakes[e].render(ctx);</span><br><span class="line">    &#125;</span><br><span class="line">    /*  一帧一帧的画 */</span><br><span class="line">    this.loop = requestAnimationFrame(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">        drawSnow.apply(that);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line">/* 调用及控制方法 */</span><br><span class="line">var snow = new snowFall(&#123;maxFlake:60&#125;);</span><br><span class="line">snow.start();</span><br></pre></td></tr></table></figure>
-<p>以上代码是使用了两种效果，如果只要一种效果，把该样式下的所有代码删掉即可。</p>
+<p>以上代码是使用了两种效果，如果只要一种效果，把该样式下的所有代码删掉即可。<br>最后在hueman/layout/layout.ejs后面加上以下代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 雪花特效 --&gt;</span><br><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span> src=<span class="string">"\js\snow.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="Hueman添加Valine评论系统"><a href="#Hueman添加Valine评论系统" class="headerlink" title="Hueman添加Valine评论系统"></a>Hueman添加Valine评论系统</h2><p>Hexo的评论系统有很多，常见的有多说，网易云跟帖，畅言，来必力（LiveRe），Disqus，Hypercomments和Valine，其中多说和网易云已经失效，畅言需要备案，LiveRe加载速度慢。这里我选择Valine作为博客的评论系统。Valine的详细介绍和使用方法见Valine官网。</p>
 <h3 id="精益云配置"><a href="#精益云配置" class="headerlink" title="精益云配置"></a>精益云配置</h3><p>首先在LeanCloud官网注册账号，然后进入控制台，创建应用。<br>然后进入应用后，获取App ID和App Key，后面对Hueman主题进行配置时需要使用。<br>为了提高数据的安全性绑定域名，进入安全中心在Web安全域名填入域名。</p>
@@ -242,7 +245,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id=<span class="string">"busuanzi_container_site_pv"</span>&gt;</span><br><span class="line">    本站总访问量&lt;span id=<span class="string">"busuanzi_value_site_pv"</span>&gt;&lt;/span&gt;次</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
 <p>算法b：uv的方式，单个用户连续点击n篇文章，只记录1次访客数。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id=<span class="string">"busuanzi_container_site_uv"</span>&gt;</span><br><span class="line">  本站访客数&lt;span id=<span class="string">"busuanzi_value_site_uv"</span>&gt;&lt;/span&gt;人次</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
-<p>这里我将其放在themes/hueman/layout/common/footer.ejs文件的class=”footer-plugins”的div元素里。</p>
+<p>这里我将其放在themes/hueman/layout/common/footer.ejs文件的class=”footer-plugins”的div元素里。<br>如果这样设置后没有效果，还可以参考<a href="https://www.zh66.club/2019/09/02/GitHub-Hexo2/" target="_blank" rel="noopener">这篇文章</a>使用leanCloud进行文章阅读量统计。</p>
 
         </div>
         <footer class="article-footer">
@@ -250,7 +253,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2020/05/01/hueman%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/" data-id="ck9unsnqr0002wsv70zct8cdi" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2020/05/01/hueman%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/" data-id="ck9urtvb90002ggv7ctb36lts" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -326,14 +329,14 @@
         "genre": "随笔 技术随笔",
         "datePublished": "2020-05-01",
         "dateCreated": "2020-05-01",
-        "dateModified": "2020-05-02",
+        "dateModified": "2020-05-06",
         "url": "http://yoursite.com/2020/05/01/hueman主题美化/",
         "description": "利用hexo搭建个人博客请参考：hexo从零开始到搭建完整，搭建好了之后可以对其进行一些美化。
 添加卡通人物我们可以在博客的右下角添加一个萌萌的卡通人物，她还能跟着你鼠标的位置摇头，点击此处进入该项目，实现方式如下：
 输入如下命令获取 live2d ：1$ npm install --save hexo-helper-live2d
 
 模型选择请点击此处，我这里使用的是live2d-widget-m",
-        "wordCount": 2023
+        "wordCount": 2041
     }
 </script>
 
@@ -342,12 +345,12 @@
     <section id="comments">
     
         
-<div id="comment-container"></div>
+    <!-- Valine -->
+    <div class="vcomments"></div>
 
 
     
     </section>
-
 
 
 
@@ -371,6 +374,14 @@
                 <li>
                     <a class="social-tooltip" title="facebook" href="/" target="_blank" rel="noopener">
                         <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="stack-overflow" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-stack-overflow"></i>
                     </a>
                 </li>
                 
@@ -546,6 +557,14 @@
 
             
                 
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 10px;">技术</a> <a href="/tags/%E8%AF%B4%E8%AF%B4/" style="font-size: 20px;">说说</a>
+        </div>
+    </div>
+
+
             
                 
     <div class="widget-wrap widget-list">
@@ -636,6 +655,80 @@
 </script>
 
     </div>
+    
+    
+    <script src="//unpkg.com/valine"></script>
+    <script>
+        var GUEST = ['nick','mail','link'];
+        var meta = '';
+        meta = meta.split(',').filter(function (item) {
+            return GUEST.indexOf(item)>-1;
+        });
+        var avatarcdn = 'https://gravatar.loli.net/avatar/' == true;
+        new Valine({
+            el: '.vcomments',
+            notify: "",
+            verify: "",
+            appId: "WGRUhwJRUx4jnxkhgtUiKCT3-gzGzoHsz",
+            appKey: "jtC8GTsg0tbvTrmX1PzMB4oE",
+            placeholder: "Just Do It",
+            avatar:"identicon",
+            recordIP:"",
+            visitor: "true"
+        });
+    </script>
+
+
+
+
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+
+    
+    
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":150,"height":340},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
 </html>
 <!-- 页面点击小红心 -->
