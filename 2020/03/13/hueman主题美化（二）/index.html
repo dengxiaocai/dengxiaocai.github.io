@@ -10,7 +10,7 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="keywords" content="hexo hueman,说说" />
+    <meta name="keywords" content="说说,hexo hueman" />
     
     <meta name="description" content="今天又折腾了一下，换了背景，加了打赏功能和代码块复制功能，快来跟着捣鼓吧。 美化侧边栏(sidebar)标签云在hueman&#x2F;source&#x2F;css&#x2F;_partial&#x2F;sidebar.styl文件中，找到.tagcloud下面标签的样式代码，覆盖为以下代码就行了，整体就是下面这样: 123456789101112131415161718192021.tagcloud    a        whit">
 <meta property="og:type" content="article">
@@ -21,10 +21,10 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/bg.png">
 <meta property="article:published_time" content="2020-03-13T15:52:57.000Z">
-<meta property="article:modified_time" content="2020-05-07T07:42:27.427Z">
+<meta property="article:modified_time" content="2020-05-07T07:52:42.174Z">
 <meta property="article:author" content="小才">
-<meta property="article:tag" content="hexo hueman">
 <meta property="article:tag" content="说说">
+<meta property="article:tag" content="hexo hueman">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/bg.png">
     
@@ -97,10 +97,6 @@
                             
                                         <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/python/">python</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/python/%E6%95%99%E7%A8%8B/">教程</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E9%9A%8F%E7%AC%94/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/">技术随笔</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E9%9A%8F%E7%AC%94/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a></li></ul></li></ul>
                                     
-                                <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/python">python</a>
-                                </li>
-                            
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/technology">技术</a>
                                 </li>
@@ -248,11 +244,18 @@
 <hr>
 <h2 id="代码块复制功能"><a href="#代码块复制功能" class="headerlink" title="代码块复制功能"></a>代码块复制功能</h2><h3 id="下载clipboard-js"><a href="#下载clipboard-js" class="headerlink" title="下载clipboard.js"></a>下载clipboard.js</h3><p>第三方插件 clipboardjs ，相关介绍和兼容性我就不赘述了，去它<a href="https://clipboardjs.com/" target="_blank" rel="noopener">主页</a>或<a href="https://github.com/zenorocha/clipboard.js" target="_blank" rel="noopener">github</a>上看。<br>保存文件clipboard.js、clipboard.min.js，到目录\themes\next\source\js\下</p>
 <h3 id="clipboardjs-使用"><a href="#clipboardjs-使用" class="headerlink" title="clipboardjs 使用"></a>clipboardjs 使用</h3><p>在\themes\hueman\source\js\目录下，创建clipboard-use.js文件，文件内容如下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">/*页面载入完成后，创建复制按钮*/</span><br><span class="line">!<span class="keyword">function</span> (e, t, a) &#123; </span><br><span class="line">  /* code */</span><br><span class="line">  var initCopyCode = <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    var copyHtml = <span class="string">''</span>;</span><br><span class="line">    copyHtml += <span class="string">'&lt;button class="btn-copy" data-clipboard-snippet=""&gt;'</span>;</span><br><span class="line">    copyHtml += <span class="string">'  &lt;i class="fa fa-globe"&gt;&lt;/i&gt;&lt;span&gt;copy&lt;/span&gt;'</span>;</span><br><span class="line">    copyHtml += <span class="string">'&lt;/button&gt;'</span>;</span><br><span class="line">    $(<span class="string">".highlight .code pre"</span>).before(copyHtml);</span><br><span class="line">    new ClipboardJS(<span class="string">'.btn-copy'</span>, &#123;</span><br><span class="line">        target: <span class="keyword">function</span>(trigger) &#123;</span><br><span class="line">            <span class="built_in">return</span> trigger.nextElementSibling;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  initCopyCode();</span><br><span class="line">&#125;(window, document);</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">/*页面载入完成后，创建复制按钮*/</span><br><span class="line">!<span class="keyword">function</span> (e, t, a) &#123; </span><br><span class="line">  /* code */</span><br><span class="line">  var initCopyCode = <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    var copyHtml = <span class="string">''</span>;</span><br><span class="line">    copyHtml += <span class="string">'&lt;button class="btn-copy" data-clipboard-snippet=""&gt;'</span>;</span><br><span class="line">    copyHtml += <span class="string">'  &lt;i class="fa fa-globe"&gt;&lt;/i&gt;&lt;span&gt;copy&lt;/span&gt;'</span>;</span><br><span class="line">    copyHtml += <span class="string">'&lt;/button&gt;'</span>;</span><br><span class="line">    $(<span class="string">".highlight .code"</span>).before(copyHtml);</span><br><span class="line">    new ClipboardJS(<span class="string">'.btn-copy'</span>, &#123;</span><br><span class="line">        target: <span class="keyword">function</span>(trigger) &#123;</span><br><span class="line">            <span class="built_in">return</span> trigger.nextElementSibling;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  initCopyCode();</span><br><span class="line">&#125;(window, document);</span><br></pre></td></tr></table></figure>
 <p>在.\themes\hueman\source\css_custom\custom.styl文件中添加下面代码：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">//代码块复制按钮</span><br><span class="line">.highlight&#123;</span><br><span class="line">  //方便copy代码按钮（btn-copy）的定位</span><br><span class="line">  position: relative;</span><br><span class="line">&#125;</span><br><span class="line">.btn-copy &#123;</span><br><span class="line">    display: inline-block;</span><br><span class="line">    cursor: pointer;</span><br><span class="line">    background-color: <span class="comment">#eee;</span></span><br><span class="line">    background-image: linear-gradient(<span class="comment">#fcfcfc,#eee);</span></span><br><span class="line">    border: 1px solid <span class="comment">#d5d5d5;</span></span><br><span class="line">    border-radius: 3px;</span><br><span class="line">    -webkit-user-select: none;</span><br><span class="line">    -moz-user-select: none;</span><br><span class="line">    -ms-user-select: none;</span><br><span class="line">    user-select: none;</span><br><span class="line">    -webkit-appearance: none;</span><br><span class="line">    font-size: 13px;</span><br><span class="line">    font-weight: 700;</span><br><span class="line">    line-height: 20px;</span><br><span class="line">    color: <span class="comment">#333;</span></span><br><span class="line">    -webkit-transition: opacity .3s ease-in-out;</span><br><span class="line">    -o-transition: opacity .3s ease-in-out;</span><br><span class="line">    transition: opacity .3s ease-in-out;</span><br><span class="line">    padding: 2px 6px;</span><br><span class="line">    position: absolute;</span><br><span class="line">    right: 5px;</span><br><span class="line">    top: 5px;</span><br><span class="line">    opacity: 0;</span><br><span class="line">&#125;</span><br><span class="line">.btn-copy span &#123;</span><br><span class="line">    margin-left: 5px;</span><br><span class="line">&#125;</span><br><span class="line">.highlight:hover .btn-copy&#123;</span><br><span class="line">  opacity: 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>在.\themes\next\layout_layout.ejs文件中，添加引用</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 代码块复制功能 --&gt;</span><br><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span> src=<span class="string">"/js/clipboard.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span> src=<span class="string">"/js/clipboard-use.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="Hexo文章加密"><a href="#Hexo文章加密" class="headerlink" title="Hexo文章加密"></a>Hexo文章加密</h2><p>博客根目录下运行以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-blog-encrypt</span><br></pre></td></tr></table></figure>
+<p>在博客根目录_config.yml文件中启用该插件:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">encrypt:</span><br><span class="line">    <span class="built_in">enable</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>然后在你的文章的头部添加上对应的字段，如 password, abstract, message</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 文章加密</span><br><span class="line">date: 2019-01-04T22:20:13.000Z</span><br><span class="line">category: 教程</span><br><span class="line">tags:</span><br><span class="line">  - 博客</span><br><span class="line">  - Hexo</span><br><span class="line">keywords: 博客文章密码</span><br><span class="line">password: TloveY</span><br><span class="line">abstract: 密码：TloveY</span><br><span class="line">message:  输入密码，查看文章</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a href="https://kksan.top/posts/2020/20719/#%E7%9B%AE%E5%BD%95" target="_blank" rel="noopener">hexo——hueman主题美化（持续更新中）</a><br><a href="https://www.jianshu.com/p/16a8f15c543d" target="_blank" rel="noopener">Hexo博客添加打赏功能</a><br><a href="https://vic.kim/2019/05/26/Hexo%20NexT%20%E4%BB%A3%E7%A0%81%E5%9D%97%E5%A4%8D%E5%88%B6%E5%8A%9F%E8%83%BD/" target="_blank" rel="noopener">Hexo NexT 代码块复制功能</a></p>
 
@@ -301,7 +304,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2020/03/13/hueman%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%EF%BC%88%E4%BA%8C%EF%BC%89/" data-id="ck9wgsogn0006y4v78ish6zqq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2020/03/13/hueman%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%EF%BC%88%E4%BA%8C%EF%BC%89/" data-id="ck9wh7xa1000650v72wn605zz" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -373,7 +376,7 @@
         },
         "headline": "我的文章",
         "image": "http://yoursite.com/images/bg.png",
-        "keywords": "hexo hueman 说说",
+        "keywords": "说说 hexo hueman",
         "genre": "随笔 技术随笔",
         "datePublished": "2020-03-13",
         "dateCreated": "2020-03-13",
@@ -382,7 +385,7 @@
         "description": "今天又折腾了一下，换了背景，加了打赏功能和代码块复制功能，快来跟着捣鼓吧。
 美化侧边栏(sidebar)标签云在hueman/source/css/_partial/sidebar.styl文件中，找到.tagcloud下面标签的样式代码，覆盖为以下代码就行了，整体就是下面这样:
 123456789101112131415161718192021.tagcloud    a        whit",
-        "wordCount": 2292
+        "wordCount": 2364
     }
 </script>
 
@@ -464,18 +467,18 @@
         
 <nav id="article-nav">
     
-        <a href="/2020/03/13/python%E6%95%99%E7%A8%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2020/03/14/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">下一篇</strong>
         <p class="article-nav-title">
         
-            我的文章
+            Hello World
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2020/03/13/%E6%88%91%E7%9A%84%E6%96%87%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2020/03/13/python%E6%95%99%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
         <p class="article-nav-title">我的文章</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
@@ -562,26 +565,6 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2020/03/13/python%E6%95%99%E7%A8%8B/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/python/">python</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/python/%E6%95%99%E7%A8%8B/">教程</a></p>
-                            <p class="item-title"><a href="/2020/03/13/python%E6%95%99%E7%A8%8B/" class="title">我的文章</a></p>
-                            <p class="item-date"><time datetime="2020-03-13T15:52:57.000Z" itemprop="datePublished">2020-03-13</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
                             <a href="/2020/03/13/hueman%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%EF%BC%88%E4%BA%8C%EF%BC%89/" class="thumbnail">
     
     
@@ -595,6 +578,26 @@
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E9%9A%8F%E7%AC%94/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/">技术随笔</a></p>
                             <p class="item-title"><a href="/2020/03/13/hueman%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%EF%BC%88%E4%BA%8C%EF%BC%89/" class="title">我的文章</a></p>
+                            <p class="item-date"><time datetime="2020-03-13T15:52:57.000Z" itemprop="datePublished">2020-03-13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2020/03/13/python%E6%95%99%E7%A8%8B/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/python/">python</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/python/%E6%95%99%E7%A8%8B/">教程</a></p>
+                            <p class="item-title"><a href="/2020/03/13/python%E6%95%99%E7%A8%8B/" class="title">我的文章</a></p>
                             <p class="item-date"><time datetime="2020-03-13T15:52:57.000Z" itemprop="datePublished">2020-03-13</time></p>
                         </div>
                     </li>
