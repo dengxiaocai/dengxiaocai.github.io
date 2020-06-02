@@ -21,7 +21,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://dengxiaocai.github.io/images/bg.png">
 <meta property="article:published_time" content="2020-05-07T08:45:57.000Z">
-<meta property="article:modified_time" content="2020-05-15T10:54:34.126Z">
+<meta property="article:modified_time" content="2020-06-02T09:42:18.312Z">
 <meta property="article:author" content="小才">
 <meta property="article:tag" content="hexo hueman">
 <meta property="article:tag" content="说说">
@@ -97,12 +97,8 @@
                                     <a class="main-nav-list-link" href="/">主页</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/python/">python</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/python/%E6%95%99%E7%A8%8B/">教程</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/python/%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B/">爬虫教程</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E9%9A%8F%E7%AC%94/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/">技术随笔</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E9%9A%8F%E7%AC%94/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/python/">python</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/python/%E6%95%99%E7%A8%8B/">教程</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/python/%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B/">爬虫教程</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF/">通信技术</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF/%E5%A4%A9%E7%BA%BF%E8%AE%BE%E8%AE%A1/">天线设计</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E9%9A%8F%E7%AC%94/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/">技术随笔</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E9%9A%8F%E7%AC%94/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a></li></ul></li></ul>
                                     
-                                <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/technology">技术</a>
-                                </li>
-                            
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/board">留言板</a>
                                 </li>
@@ -231,12 +227,12 @@
 <p>因为修改后在小屏情况下，按钮会和文章板块紧贴着，非常不美观，所以要把hueman/source/css/_responsive.styl（专门控制响应式布局的）文件中的#back-to-top样式代码覆盖为下面的代码</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#back-to-top</span></span><br><span class="line">            <span class="selector-tag">margin</span>: 20<span class="selector-tag">px</span> <span class="selector-tag">auto</span> 0;</span><br><span class="line">            <span class="selector-tag">box-shadow</span>: 0 1<span class="selector-tag">px</span> 1<span class="selector-tag">px</span> <span class="selector-tag">rgba</span>(0,0,0,0<span class="selector-class">.1</span>), <span class="selector-tag">inset</span> 0 1<span class="selector-tag">px</span> 0 <span class="selector-tag">rgba</span>(0,0,0,0<span class="selector-class">.05</span>);</span><br></pre></td></tr></table></figure>
 <p>这样子的话只有拉到最底部才能回到顶部，如果文章过长，看到一半想回到顶部不太方便，所以下面是在右下角固定位置放置回到顶部按键的方法。<br>打开文件夹/themes/hueman/layout/common在此文件夹下，新建文件totop.ejs，并向其中加入如下代码：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"totop"</span> style=<span class="string">"position:fixed;bottom:10px;right:100px;cursor: pointer;"</span>&gt;</span><br><span class="line">&lt;a title=<span class="string">"返回顶部"</span>&gt;&lt;img src=<span class="string">"/images/scrollup.png"</span>/&gt;&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"totop"</span> style=<span class="string">"position:fixed;bottom:10px;right:115px;cursor: pointer;"</span>&gt;</span><br><span class="line">&lt;a title=<span class="string">"返回顶部"</span>&gt;&lt;img src=<span class="string">"/images/scrollup.png"</span>/&gt;&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 <p>打开文件夹/themes/hueman/source/js，新建文件totop.js，将如下代码复制其中:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">function</span>($) &#123;</span><br><span class="line">    // When to show the scroll link</span><br><span class="line">    // higher number = scroll link appears further down the page</span><br><span class="line">    var upperLimit = 1000;</span><br><span class="line"></span><br><span class="line">    // Our scroll link element</span><br><span class="line">    var scrollElem = $(<span class="string">'#totop'</span>);</span><br><span class="line"></span><br><span class="line">    // Scroll to top speed</span><br><span class="line">    var scrollSpeed = 1600;</span><br><span class="line"></span><br><span class="line">    // Show and hide the scroll to top link based on scroll position</span><br><span class="line">    scrollElem.hide();</span><br><span class="line">    $(window).scroll(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">        var scrollTop = $(document).scrollTop();</span><br><span class="line">        <span class="keyword">if</span> ( scrollTop &gt; upperLimit ) &#123;</span><br><span class="line">            $(scrollElem).stop().fadeTo(300, 1); // fade back <span class="keyword">in</span></span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            $(scrollElem).stop().fadeTo(300, 0); // fade out</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    // Scroll to top animation on click</span><br><span class="line">    $(scrollElem).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">        $(<span class="string">'html, body'</span>).animate(&#123;scrollTop:0&#125;, scrollSpeed); <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;)(jQuery);</span><br></pre></td></tr></table></figure>
 <p>可以对upperLimit和scrollSpeed参数进行修改，控制显示位置和回滚速度。<br>打开文件/themes/hueman/layout/common/footer.ejs，在文件的末尾添加以下两行代码：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- partial(<span class="string">'totop'</span>) %&gt;</span><br><span class="line">&lt;script src=<span class="string">"&lt;%- config.root %&gt;js/totop.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>去网上找一张图片复制到/source/images目录下，文件名为scrollup.png，页面足够长时，就可以看见按钮出现。注意如果图片太大要用PS调整一下大小，我的长宽都是100像素。<br>我的图片是在这里找的：<a href="http://616pic.com/sucai/ve9i5o98p.html" target="_blank" rel="noopener">回到顶部水滴图案</a>。</p>
+<p>去网上找一张图片复制到/source/images目录下，文件名为scrollup.png，页面足够长时，就可以看见按钮出现。注意如果图片太大要用PS调整一下大小，我的长宽都是70像素。<br>我的图片是在这里找的：<a href="http://616pic.com/sucai/ve9i5o98p.html" target="_blank" rel="noopener">回到顶部水滴图案</a>。</p>
 <hr>
 <h2 id="添加文章版权，结束条，打赏按钮"><a href="#添加文章版权，结束条，打赏按钮" class="headerlink" title="添加文章版权，结束条，打赏按钮"></a>添加文章版权，结束条，打赏按钮</h2><p>进入hueman/layout/common/article.ejs文件中，在&lt;footer class=”article-footer”&gt;标签上方加入如下代码（不需要的部分可以删掉）</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- copyright --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.copyright</span> &amp;&amp; <span class="attr">post.copyright</span>) &#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"display: block;"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"post-copyright"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"post-copyright-author"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">strong</span> <span class="attr">style</span>=<span class="string">"font-weight: bolder;"</span>&gt;</span>本文作者：<span class="tag">&lt;/<span class="name">strong</span>&gt;</span>小K同學</span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"post-copyright-link"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">strong</span> <span class="attr">style</span>=<span class="string">"font-weight: bolder;"</span>&gt;</span>源站链接：<span class="tag">&lt;/<span class="name">strong</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- post.permalink %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%-</span> <span class="attr">post.permalink</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"post-copyright-license"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">strong</span> <span class="attr">style</span>=<span class="string">"font-weight: bolder;"</span>&gt;</span>版权声明：<span class="tag">&lt;/<span class="name">strong</span>&gt;</span>本博客所有文章除特别声明外，均采用<span class="tag">&lt;<span class="name">a</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">href</span>=<span class="string">"https://creativecommons.org/licenses/by-nc-sa/4.0/"</span>&gt;</span> <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-creative-commons"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>BY-NC-SA <span class="tag">&lt;/<span class="name">a</span>&gt;</span>许可协议。转载请注明出处！</span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- read_over --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.read_over</span>) &#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"read-over"</span>&gt;</span>----------本文结束 <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-paw"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> 我是无情的昏割线----------<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- reward --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.reward</span>) &#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"reward"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"rewardBtn"</span> <span class="attr">onclick</span>=<span class="string">"var e=document.getElementById('QR');'none'===e.style.display?e.style.display='block':e.style.display='none'"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>打赏<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"QR"</span> <span class="attr">style</span>=<span class="string">"display: none;"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"wechat"</span> <span class="attr">style</span>=<span class="string">"display: inline-block;"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">img</span> <span class="attr">id</span>=<span class="string">"wechat_qr"</span> <span class="attr">src</span>=<span class="string">"https://s2.ax1x.com/2020/02/15/1zzhnA.png"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"margin-bottom: 10px;"</span>&gt;</span>微信<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"alipay"</span> <span class="attr">style</span>=<span class="string">"display: inline-block;"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">img</span> <span class="attr">id</span>=<span class="string">"wechat_qr"</span> <span class="attr">src</span>=<span class="string">"https://s2.ax1x.com/2020/02/15/1zz40I.png"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"margin-bottom: 10px;"</span>&gt;</span>支付宝<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
@@ -313,7 +309,7 @@
 
 
 
-    <a data-url="https://dengxiaocai.github.io/2020/05/07/hueman%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%EF%BC%88%E4%BA%8C%EF%BC%89/" data-id="cka83o5zl0002h0v7dwql7wgr" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://dengxiaocai.github.io/2020/05/07/hueman%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%EF%BC%88%E4%BA%8C%EF%BC%89/" data-id="ckaxqle9x0002g0v762zx53sk" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -389,7 +385,7 @@
         "genre": "随笔 技术随笔",
         "datePublished": "2020-05-07",
         "dateCreated": "2020-05-07",
-        "dateModified": "2020-05-15",
+        "dateModified": "2020-06-02",
         "url": "https://dengxiaocai.github.io/2020/05/07/hueman主题美化（二）/",
         "description": "今天又折腾了一下，换了背景，加了打赏功能和代码块复制功能，快来跟着捣鼓吧。
 美化侧边栏(sidebar)标签云在hueman/source/css/_partial/sidebar.styl文件中，找到.tagcloud下面&lt;a&gt;标签的样式代码，覆盖为以下代码就行了，整体就是下面这样:
@@ -543,6 +539,26 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2020/06/01/%E5%A4%A9%E7%BA%BF%E6%8A%80%E6%9C%AF/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF/">通信技术</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF/%E5%A4%A9%E7%BA%BF%E8%AE%BE%E8%AE%A1/">天线设计</a></p>
+                            <p class="item-title"><a href="/2020/06/01/%E5%A4%A9%E7%BA%BF%E6%8A%80%E6%9C%AF/" class="title">天线设计</a></p>
+                            <p class="item-date"><time datetime="2020-06-01T08:45:57.000Z" itemprop="datePublished">2020-06-01</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2020/05/07/python%E6%95%99%E7%A8%8B/" class="thumbnail">
     
     
@@ -620,26 +636,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2020/03/13/%E6%88%91%E7%9A%84%E6%96%87%E7%AB%A0/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/weixin.png)" alt="我的文章" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E9%9A%8F%E7%AC%94/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a></p>
-                            <p class="item-title"><a href="/2020/03/13/%E6%88%91%E7%9A%84%E6%96%87%E7%AB%A0/" class="title">我的文章</a></p>
-                            <p class="item-date"><time datetime="2020-03-13T15:52:57.000Z" itemprop="datePublished">2020-03-13</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -649,7 +645,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/python/%E6%95%99%E7%A8%8B/">教程</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B/">爬虫教程</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/">技术随笔</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/python/%E6%95%99%E7%A8%8B/">教程</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B/">爬虫教程</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF/">通信技术</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF/%E5%A4%A9%E7%BA%BF%E8%AE%BE%E8%AE%A1/">天线设计</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/">技术随笔</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -659,7 +655,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -669,7 +665,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-hueman/" rel="tag">hexo hueman</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python%E6%95%99%E7%A8%8B/" rel="tag">python教程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%B4%E8%AF%B4/" rel="tag">说说</a><span class="tag-list-count">2</span></li></ul>
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-hueman/" rel="tag">hexo hueman</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python%E6%95%99%E7%A8%8B/" rel="tag">python教程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A9%E7%BA%BF%E8%AE%BE%E8%AE%A1/" rel="tag">天线设计</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%B4%E8%AF%B4/" rel="tag">说说</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF/" rel="tag">通信技术</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -679,7 +675,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/hexo-hueman/" style="font-size: 20px;">hexo hueman</a> <a href="/tags/python%E6%95%99%E7%A8%8B/" style="font-size: 10px;">python教程</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 10px;">技术</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;">教程</a> <a href="/tags/%E8%AF%B4%E8%AF%B4/" style="font-size: 20px;">说说</a>
+            <a href="/tags/hexo-hueman/" style="font-size: 20px;">hexo hueman</a> <a href="/tags/python%E6%95%99%E7%A8%8B/" style="font-size: 10px;">python教程</a> <a href="/tags/%E5%A4%A9%E7%BA%BF%E8%AE%BE%E8%AE%A1/" style="font-size: 10px;">天线设计</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 10px;">技术</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;">教程</a> <a href="/tags/%E8%AF%B4%E8%AF%B4/" style="font-size: 20px;">说说</a> <a href="/tags/%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF/" style="font-size: 10px;">通信技术</a>
         </div>
     </div>
 
@@ -772,7 +768,7 @@
         showTime(Counter);
     });
 </script>
-<div id="totop" style="position:fixed;bottom:10px;right:100px;cursor: pointer;">
+<div id="totop" style="position:fixed;bottom:10px;right:115px;cursor: pointer;">
 <a title="返回顶部"><img src="/images/scrollup.png"/></a>
 </div>
 <script src="/js/totop.js"></script>
